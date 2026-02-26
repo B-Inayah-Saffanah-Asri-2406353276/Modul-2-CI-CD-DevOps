@@ -7,9 +7,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public class CarRepository {
+public class CarRepository implements CarRepositoryInterface{
 
-    static int id = 0;
     private List<Car> carData = new ArrayList<>();
 
     public Car create(Car car) {
