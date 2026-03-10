@@ -146,7 +146,7 @@ class PaymentServiceTest {
     void testGetAllPayments() {
         Payment p1 = new Payment("P-001", "BANK_TRANSFER", bankTransferData);
         Payment p2 = new Payment("P-002", "VOUCHER", voucherData);
-        doReturn(List.of(p1, p2)).when(paymentRepository).getAllPayments();
+        doReturn(List.of(p1, p2)).when(paymentRepository).findAll();
 
         List<Payment> result = paymentService.getAllPayments();
 
