@@ -47,6 +47,19 @@ Tanpa SRP, jika ProductController mengurus logic termasuk Car, setiap perubahan 
 Tanpa DIP, jika ingin mengganti implementasi service, saya harus mengubah kode di banyak tempat sehingga dapat meningkatkan risiko bug.
 
 
+# Modul 4 Refactoring and TDD #
+1. Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best
+   Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this
+   TDD flow is useful enough for you or not. If not, explain things that you need to do next time
+   you make more tests.
+
+TDD ini lumayan berguna karena test dibuat lebih dulu sehingga implementasi lebih terarah. Namun ada kekurangan dimana beberapa edge case baru disadari setelah test awal dibuat. Saya harus lebih teliti menganalisis spesifikasi secara menyeluruh sebelum mulai menulis test pertama agar semua skenario sudah terpetakan sejak awal.
+
+2. You have created unit tests in Tutorial. Now reflect whether your tests have successfully
+   followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you
+   create more tests.
+
+Secara umum test sudah mengikuti prinsip F.I.R.S.T. Test berjalan Fast karena menggunakan Mockito sehingga tidak hit database, Independent karena setiap test memiliki data sendiri, Repeatable karena tidak bergantung environment eksternal, dan Self-validating karena menggunakan `assert` dan `verify` yang jelas hasilnya, dan Timely karena test sudah ditulis sebelum implementasi sesuai alur TDD.
 
 
 
